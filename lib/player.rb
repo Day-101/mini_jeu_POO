@@ -35,8 +35,6 @@ class Player
     return rand(1..6)
   end
 
-
-
 end
 
 class HumanPlayer < Player
