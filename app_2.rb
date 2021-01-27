@@ -4,9 +4,12 @@ Bundler.require
 # require_relative 'lib/game'
 require_relative 'lib/player'
 
+puts
 puts ' /-----------------------------------\ '
 puts " |   Bienvenue sur 'POO no Jutsu' !  |"
-puts ' |         "Bonne chance !"          |'
+puts " |        - Naruto Mission -         |"
+puts " |                                   |"
+puts ' |       "GAMBATEBAYO!" \(^o^ )\     |'
 puts " \\-----------------------------------/"
 puts
 puts "                         @"
@@ -41,6 +44,7 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
   puts "1 - #{player2.show_state}"
   print ">"
   action = gets.chomp.to_s
+  puts "______________________________________________"
   case
   when action == "a"
     user.search_weapon
@@ -53,9 +57,11 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
   end
   
   enemies = Player.enemies
-  puts
-  if player1.life_points || player2.life_points < 0
+  if player1.life_points && player2.life_points > 1
+    puts
     puts "Les autres joueurs t'attaquent !"
+  else
+    
   end
   puts
   enemies.each do |i|
@@ -65,6 +71,11 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
   end
 end
 puts
-puts "Bravo ! tu as gagné !"
+puts ' /-----------------------------------\ '
+puts " |     Félicitation ! Tu as battus   |"
+puts " |          Zabuza et Haku !         |"
+puts " |                                   |"
+puts " |        Merci d'avoir joué !       |"
+puts " \\-----------------------------------/"
 puts
 # binding.pry
