@@ -45,15 +45,15 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
   print ">"
   action = gets.chomp.to_s
   puts "______________________________________________"
-  case
-  when action == "a"
-    user.search_weapon
-  when action == "s"
-    user.search_health_pack
-  when action == "0"
-    user.attacks(player1)
-  when action == "1"
-    user.attacks(player2)
+  case 
+    when action == "a"
+      user.search_weapon
+    when action == "s"
+      user.search_health_pack
+    when action == "0"
+      user.attacks(player1)
+    when action == "1"
+      user.attacks(player2)
   end
   
   enemies = Player.enemies
